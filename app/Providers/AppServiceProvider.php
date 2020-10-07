@@ -6,8 +6,8 @@ use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Blade;
 use App\Observers\AssetObserver;
 use App\Observers\HospitalObserver;
-use App\Asset;
-use App\Hospital;
+use App\Models\Asset;
+use App\Models\Hospital;
 
 class AppServiceProvider extends ServiceProvider
 {

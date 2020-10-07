@@ -1,7 +1,9 @@
 <?php
 
-use App\Hospital;
-use App\User;
+namespace Database\Seeders;
+
+use App\Models\Hospital;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class HospitalsTableSeeder extends Seeder
@@ -16,11 +18,11 @@ class HospitalsTableSeeder extends Seeder
         for ($i = 0; $i < 5; $i++) {
             $randomNumber = rand(123, 789);
 
-            $hospital = factory(Hospital::class)->create([
+            $hospital = Hospital::factory()->create([
                 'name' => "Hospital $randomNumber",
             ]);
 
-            $director = factory(User::class)->create([
+            $director = User::factory()->create([
                 'name'           => "Director $randomNumber",
                 'email'          => "director$randomNumber@gmail.com",
                 'password'       => bcrypt('password'),
@@ -29,7 +31,7 @@ class HospitalsTableSeeder extends Seeder
             ]);
             $director->roles()->sync(2);
 
-            $doctor = factory(User::class)->create([
+            $doctor = User::factory()->create([
                 'name'           => "Doctor $randomNumber",
                 'email'          => "doctor$randomNumber@gmail.com",
                 'password'       => bcrypt('password'),

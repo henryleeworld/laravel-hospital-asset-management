@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Asset;
+use App\Models\Asset;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\MassDestroyTransactionRequest;
 use App\Http\Requests\StoreTransactionRequest;
 use App\Http\Requests\UpdateTransactionRequest;
-use App\Stock;
-use App\Transaction;
-use App\User;
+use App\Models\Stock;
+use App\Models\Transaction;
+use App\Models\User;
 use Exception;
 use Gate;
 use Illuminate\Contracts\Routing\ResponseFactory;

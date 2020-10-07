@@ -2,10 +2,10 @@
 
 namespace App\Console\Commands;
 
-use App\Hospital;
-use App\User;
-use App\Stock;
-use App\Transaction;
+use App\Models\Hospital;
+use App\Models\User;
+use App\Models\Stock;
+use App\Models\Transaction;
 use Illuminate\Console\Command;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;

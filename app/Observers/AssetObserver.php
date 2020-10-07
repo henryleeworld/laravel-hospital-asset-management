@@ -2,9 +2,9 @@
 
 namespace App\Observers;
 
-use App\Asset;
-use App\Stock;
-use App\Hospital;
+use App\Models\Asset;
+use App\Models\Stock;
+use App\Models\Hospital;
 
 /**
  * Class AssetObserver
@@ -23,7 +23,7 @@ class AssetObserver
         $hospitals  = Hospital::all();
 
         foreach ($hospitals as $hospital) {
-            factory(Stock::class)->create([
+            Stock::factory()->create([
                 'asset_id'    => $asset->id,
                 'hospital_id' => $hospital->id,
             ]);

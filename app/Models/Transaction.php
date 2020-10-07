@@ -1,17 +1,17 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use App\Traits\MultiTenantModelTrait;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use \DateTimeInterface;
+use DateTimeInterface;
 
-class Stock extends Model
+class Transaction extends Model
 {
     use SoftDeletes, MultiTenantModelTrait;
 
-    public $table = 'stocks';
+    public $table = 'transactions';
 
     protected $dates = [
         'created_at',
@@ -20,12 +20,13 @@ class Stock extends Model
     ];
 
     protected $fillable = [
+        'stock',
         'hospital_id',
+        'user_id',
         'asset_id',
         'created_at',
         'updated_at',
         'deleted_at',
-        'current_stock',
     ];
 
     protected function serializeDate(DateTimeInterface $date)
@@ -43,6 +44,12 @@ class Stock extends Model
     public function hospital()
     {
         return $this->belongsTo(Hospital::class, 'hospital_id');
+
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
 
     }
 }

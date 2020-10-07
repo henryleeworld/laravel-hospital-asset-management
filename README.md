@@ -1,6 +1,6 @@
-# Laravel 7 醫院資產管理
+# Laravel 8 醫院資產管理
 
-從資產購入醫院開始到資產退出的整個生命周期，能針對固定資產實物進行全程跟蹤管理。解決了資產不明設備不清，閒置浪費、虛增資產和資產流失問題。Laravel 7 醫院資產管理主要是用的 [QuickAdminPanel](https://quickadminpanel.com) 生成的，除了一些定制代碼，可依需求彈性改造的工具。
+從資產購入醫院開始到資產退出的整個生命周期，能針對固定資產實物進行全程跟蹤管理。解決了資產不明設備不清，閒置浪費、虛增資產和資產流失問題。Laravel 8 醫院資產管理主要是用的 [QuickAdminPanel](https://quickadminpanel.com) 生成的，除了一些定制代碼，可依需求彈性改造的工具。
 
 ## 使用方式
 - 把整個專案複製一份到你的電腦裡，這裡指的「內容」不是只有檔案，而是指所有整個專案的歷史紀錄、分支、標籤等內容都會複製一份下來。
@@ -26,8 +26,8 @@ $ php artisan migrate --seed
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/QCAx2oK.png)
+![](https://i.imgur.com/7sMVBdE.png)
 > 使資產的管理變得輕鬆、準確，快捷和全面
 
-![](https://i.imgur.com/rseHhCQ.png)
+![](https://i.imgur.com/eWwc6bG.png)
 > 提高醫院工作效率，增加效益，降低成本，有助於醫院真正實現厲行節約的原則

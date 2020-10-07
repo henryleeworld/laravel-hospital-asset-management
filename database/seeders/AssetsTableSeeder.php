@@ -1,7 +1,9 @@
 <?php
 
-use App\Asset;
-use App\Hospital;
+namespace Database\Seeders;
+
+use App\Models\Asset;
+use App\Models\Hospital;
 use Illuminate\Database\Seeder;
 
 /**
@@ -25,7 +27,8 @@ class AssetsTableSeeder extends Seeder
         ];
 
         foreach ($assets as $asset) {
-            factory(Asset::class)->create([
+            Asset::factory()
+            ->create([
                 'name'        => $asset,
                 'description' => $asset
             ]);

@@ -1,16 +1,17 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use DateTimeInterface;
 
-class Hospital extends Model
+class Asset extends Model
 {
-    use SoftDeletes;
+    use HasFactory, SoftDeletes;
 
-    public $table = 'hospitals';
+    public $table = 'assets';
 
     protected $dates = [
         'created_at',
@@ -23,16 +24,17 @@ class Hospital extends Model
         'created_at',
         'updated_at',
         'deleted_at',
+        'description',
+        'danger_level',
     ];
 
     protected function serializeDate(DateTimeInterface $date)
     {
         return $date->format('Y-m-d H:i:s');
-
     }
 
-    public function stocks()
+    public function transactions()
     {
-        return $this->hasMany(Stock::class);
+        return $this->hasMany(Transaction::class, 'asset_id');
     }
 }

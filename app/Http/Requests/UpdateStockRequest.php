@@ -2,7 +2,7 @@
 
 namespace App\Http\Requests;
 
-use App\Stock;
+use App\Models\Stock;
 use Gate;
 use Illuminate\Foundation\Http\FormRequest;
 use Symfony\Component\HttpFoundation\Response;
