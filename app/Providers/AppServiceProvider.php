@@ -2,12 +2,12 @@
 
 namespace App\Providers;
 
-use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Facades\Blade;
-use App\Observers\AssetObserver;
-use App\Observers\HospitalObserver;
 use App\Models\Asset;
 use App\Models\Hospital;
+use App\Observers\AssetObserver;
+use App\Observers\HospitalObserver;
+use Illuminate\Support\Facades\Blade;
+use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
 {
