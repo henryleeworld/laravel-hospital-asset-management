@@ -25,7 +25,7 @@ class HospitalsTableSeeder extends Seeder
             $director = User::factory()->create([
                 'name'           => "Director $randomNumber",
                 'email'          => "director$randomNumber@gmail.com",
-                'password'       => bcrypt('password'),
+                'password'       => 'password',
                 'hospital_id'    => $hospital->id,
                 'remember_token' => null,
             ]);
@@ -34,7 +34,7 @@ class HospitalsTableSeeder extends Seeder
             $doctor = User::factory()->create([
                 'name'           => "Doctor $randomNumber",
                 'email'          => "doctor$randomNumber@gmail.com",
-                'password'       => bcrypt('password'),
+                'password'       => 'password',
                 'hospital_id'    => $hospital->id,
                 'remember_token' => null,
             ]);

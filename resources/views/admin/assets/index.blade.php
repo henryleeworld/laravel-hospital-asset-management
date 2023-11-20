@@ -32,7 +32,7 @@
                             {{ trans('cruds.asset.fields.description') }}
                         </th>
                         <th>
-                            Danger level
+                            {{ trans('cruds.asset.fields.danger_level') }}
                         </th>
                         <th>
                             &nbsp;

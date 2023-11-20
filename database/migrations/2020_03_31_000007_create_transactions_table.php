@@ -9,7 +9,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('transactions', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id();
             $table->integer('stock');
             $table->timestamps();
             $table->softDeletes();
